@@ -1,2 +1,2 @@
-# DevoOps with Docker -course exercises.
+# DevOps with Docker -course exercises.
 
