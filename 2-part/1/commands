@@ -1,0 +1,5 @@
+# If we already have build frontend and backend images,
+# we don't need to build them again
+
+# docker-compose build
+docker-compose up
