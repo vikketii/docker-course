@@ -1,7 +1,7 @@
 FROM ubuntu:16.04
 
 WORKDIR /app
-# When docker image is build inside app folder, we can use '.'
+# When build inside app folder, we can use '.'
 COPY . /app
 
 RUN apt-get update && apt-get install -y curl
@@ -13,6 +13,5 @@ RUN npm install
 
 EXPOSE 5000
 
-CMD npm start
-
+CMD API_URL=http://localhost:8000 npm start
 
