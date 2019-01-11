@@ -1,5 +1,5 @@
-docker build -t backend  backend/ .
-docker build -t frontend frontend/ .
+docker build -t backend  backend/
+docker build -t frontend frontend/
 
 docker run -v $(pwd)/logs.txt:/logs.txt -p 8000:8000 -d backend
 docker run -p 5000:5000 -d frontend

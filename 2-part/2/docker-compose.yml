@@ -1,0 +1,22 @@
+version: '3'
+
+services:
+
+    redis:
+        image: redis
+
+    frontend:
+        image: frontend
+        build: frontend-example-docker
+        ports:
+            - 5000:5000
+
+    backend:
+        image: backend
+        build: backend-example-docker
+        ports:
+            - 8000:8000
+        volumes:
+            - ./backend-example-docker/logs.txt:/app/logs.txt
+        environment:
+            - REDIS=redis
